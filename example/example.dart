@@ -56,6 +56,7 @@ class Home extends StatelessWidget {
                   //   ),
                   // ),
                   StoryItem.inlineImage(
+                    backgroundColor: Colors.black,
                     url:
                         "https://image.ibb.co/cU4WGx/Omotuo-Groundnut-Soup-braperucci-com-1.jpg",
                     controller: controller,
@@ -69,6 +70,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   StoryItem.inlineImage(
+                    backgroundColor: Colors.black,
                     url:
                         "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
                     controller: controller,
@@ -166,21 +168,25 @@ class _MoreStoriesState extends State<MoreStories> {
             ),
           ),
           StoryItem.pageImage(
+            backgroundColor: Colors.black,
             url:
                 "https://image.ibb.co/cU4WGx/Omotuo-Groundnut-Soup-braperucci-com-1.jpg",
             caption: "Still sampling",
             controller: storyController,
           ),
           StoryItem.pageImage(
+              backgroundColor: Colors.black,
               url: "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
               caption: "Working with gifs",
               controller: storyController),
           StoryItem.pageImage(
+            backgroundColor: Colors.black,
             url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
             caption: "Hello, from the other side",
             controller: storyController,
           ),
           StoryItem.pageImage(
+            backgroundColor: Colors.black,
             url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
             caption: "Hello, from the other side2",
             controller: storyController,

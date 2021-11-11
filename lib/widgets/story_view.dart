@@ -108,6 +108,7 @@ class StoryItem {
   factory StoryItem.pageImage({
     required String url,
     required StoryController controller,
+    required Color backgroundColor,
     Key? key,
     BoxFit imageFit = BoxFit.fitWidth,
     String? caption,
@@ -118,7 +119,7 @@ class StoryItem {
     return StoryItem(
       Container(
         key: key,
-        color: Colors.black,
+        color: backgroundColor,
         child: Stack(
           children: <Widget>[
             StoryImage.url(
@@ -167,6 +168,7 @@ class StoryItem {
     required String url,
     required Text caption,
     required StoryController controller,
+    required Color backgroundColor,
     Key? key,
     BoxFit imageFit = BoxFit.cover,
     Map<String, dynamic>? requestHeaders,
@@ -181,7 +183,7 @@ class StoryItem {
         child: Container(
           color: Colors.grey[100],
           child: Container(
-            color: Colors.black,
+            color: backgroundColor,
             child: Stack(
               children: <Widget>[
                 StoryImage.url(
@@ -220,6 +222,7 @@ class StoryItem {
   factory StoryItem.pageVideo(
     String url, {
     required StoryController controller,
+    required Color backgroundColor,
     Key? key,
     Duration? duration,
     BoxFit imageFit = BoxFit.fitWidth,
@@ -230,7 +233,7 @@ class StoryItem {
     return StoryItem(
         Container(
           key: key,
-          color: Colors.black,
+          color: backgroundColor,
           child: Stack(
             children: <Widget>[
               StoryVideo.url(
@@ -268,7 +271,8 @@ class StoryItem {
   /// or `NetworkImage`. However, the story continues to play while the image loads
   /// up.
   factory StoryItem.pageProviderImage(
-    ImageProvider image, {
+    ImageProvider image,
+    Color backgroundColor, {
     Key? key,
     BoxFit imageFit = BoxFit.fitWidth,
     String? caption,
@@ -279,7 +283,7 @@ class StoryItem {
     return StoryItem(
         Container(
           key: key,
-          color: Colors.black,
+          color: backgroundColor,
           child: Stack(
             children: <Widget>[
               Center(
@@ -814,7 +818,7 @@ class StoryProgressIndicator extends StatelessWidget {
         this.indicatorHeight,
       ),
       foregroundPainter: IndicatorOval(
-        Colors.white.withOpacity(0.8),
+        Color(0XFF201A3E),
         this.value,
       ),
       painter: IndicatorOval(
