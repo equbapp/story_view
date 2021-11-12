@@ -822,7 +822,7 @@ class StoryProgressIndicator extends StatelessWidget {
         this.value,
       ),
       painter: IndicatorOval(
-        Colors.grey.withOpacity(0.8),
+        Colors.grey,
         1.0,
       ),
     );
