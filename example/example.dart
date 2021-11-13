@@ -35,6 +35,8 @@ class Home extends StatelessWidget {
             Container(
               height: 300,
               child: StoryView(
+                progressIndicatorBackgroundColor: Colors.white.withOpacity(0.8),
+                progressIndicatorForegroundColor: Colors.white.withOpacity(0.4),
                 controller: controller,
                 storyItems: [
                   StoryItem.text(
@@ -154,6 +156,8 @@ class _MoreStoriesState extends State<MoreStories> {
         title: Text("More"),
       ),
       body: StoryView(
+        progressIndicatorBackgroundColor: Colors.white.withOpacity(0.8),
+        progressIndicatorForegroundColor: Colors.white.withOpacity(0.4),
         storyItems: [
           StoryItem.text(
             title: "I guess you'd love to see more of our food. That's great.",
